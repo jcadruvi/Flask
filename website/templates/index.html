@@ -5,6 +5,16 @@
     <title></title>
 </head>
 <body>
-    Hello World+++!
+    <div id="newsPanel"></div>
+    <script src="/static/jquery-1.8.3.js"></script>
+    <script>
+        $.ajax({
+            success: function(result) {
+                console.log(result);
+            },
+            type: 'GET',
+            url: '/news/api/News'
+        })
+    </script>
 </body>
 </html>

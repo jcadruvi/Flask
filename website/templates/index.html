@@ -11,6 +11,14 @@
         $.ajax({
             success: function(result) {
                 console.log(result);
+                var $newsPanel = $('#newsPanel');
+                for (var i = 0; i < result.news.length; i++) {
+                    $newsPanel.html($newsPanel.html() +
+                        '<div>' +
+                            '<h1>' + result.news[i].headline + '</h1>' +
+                            '<h2>' + result.news[i].content + '</h2>' +
+                        '</div>')
+                }
             },
             type: 'GET',
             url: '/news/api/News'

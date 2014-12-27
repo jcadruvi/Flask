@@ -1,9 +1,9 @@
 from flask import Flask
 from flask import render_template
-import News
+import news
 
 app = Flask(__name__)
-app.register_blueprint(News.newsBluePrint, url_prefix='/news')
+app.register_blueprint(news.newsBluePrint, url_prefix='/news')
 
 @app.route('/')
 def hello_world():

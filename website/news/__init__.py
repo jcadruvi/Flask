@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from .NewsService import NewsService
+from .news_service import NewsService
 
 bp = Blueprint('news', __name__)
 newsBluePrint = Blueprint('news', __name__)

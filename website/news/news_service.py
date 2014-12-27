@@ -1,4 +1,4 @@
-from .NewsRepository import NewsRepository
+from .news_repository import NewsRepository
 
 class NewsService(object):
     def GetNews(self):
